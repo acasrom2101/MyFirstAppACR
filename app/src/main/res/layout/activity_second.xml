@@ -8,18 +8,18 @@
     tools:context=".SecondActivity">
 
     <EditText
-        android:id="@+id/editTextText"
+        android:id="@+id/campoDecimal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="text"
-        android:hint="@string/second_activity_string_hint"
+        android:hint="@string/second_activity_float_hint"
+        android:inputType="numberDecimal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.103" />
+        app:layout_constraintVertical_bias="0.529" />
 
     <TextView
         android:id="@+id/textView"
@@ -28,24 +28,24 @@
         android:text="@string/second_activity_string_message"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.232"
+        app:layout_constraintHorizontal_bias="0.233"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.057" />
+        app:layout_constraintVertical_bias="0.105" />
 
     <EditText
-        android:id="@+id/editTextNumber"
+        android:id="@+id/campoTexto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="number"
-        android:hint="@string/second_activity_int_hint"
+        android:hint="@string/second_activity_string_hint"
+        android:inputType="text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.291" />
+        app:layout_constraintVertical_bias="0.153" />
 
     <TextView
         android:id="@+id/textView2"
@@ -54,24 +54,37 @@
         android:text="@string/second_activity_int_message"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.232"
+        app:layout_constraintHorizontal_bias="0.233"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.238" />
+        app:layout_constraintVertical_bias="0.286" />
 
     <EditText
-        android:id="@+id/editTextNumberDecimal"
+        android:id="@+id/campoEntero"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="numberDecimal"
-        android:hint="@string/second_activity_float_hint"
+        android:hint="@string/second_activity_int_hint"
+        android:inputType="number"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.479" />
+        app:layout_constraintVertical_bias="0.341" />
+
+    <Switch
+        android:id="@+id/interruptorBoolean"
+        android:layout_width="232dp"
+        android:layout_height="36dp"
+        android:showText="true"
+        android:text="@string/second_activity_boolean_message"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.703" />
 
     <TextView
         android:id="@+id/textView3"
@@ -80,10 +93,10 @@
         android:text="@string/second_activity_float_message"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.232"
+        app:layout_constraintHorizontal_bias="0.233"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.421" />
+        app:layout_constraintVertical_bias="0.469" />
 
     <Button
         android:id="@+id/btnSecondSendFormToThird"
@@ -96,17 +109,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.879" />
-
-    <Switch
-        android:id="@+id/switch1"
-        android:layout_width="232dp"
-        android:layout_height="36dp"
-        android:showText="true"
-        android:text="@string/second_activity_boolean_message"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.654" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
