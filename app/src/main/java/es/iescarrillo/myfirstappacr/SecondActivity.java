@@ -43,11 +43,11 @@ public class SecondActivity extends AppCompatActivity implements View.OnClickLis
 
     @Override
     public void onClick(View v) {
-        Intent segundaActivity = new Intent(v.getContext(), ThirdActivity.class);
-        segundaActivity.putExtra("datosCampoTexto", campoTexto.getText().toString());
-        segundaActivity.putExtra("datosCampoEntero", campoEntero.getText().toString());
-        segundaActivity.putExtra("datosCampoDecimal", campoDecimal.getText().toString());
-        segundaActivity.putExtra("posicionInterruptor", interruptorBoolean.isChecked());
-        startActivity(segundaActivity);
+        Intent terceraActivity = new Intent(v.getContext(), ThirdActivity.class);
+        terceraActivity.putExtra("datosCampoTexto", campoTexto.getText().toString());
+        terceraActivity.putExtra("datosCampoEntero", campoEntero.getText().toString());
+        terceraActivity.putExtra("datosCampoDecimal", campoDecimal.getText().toString());
+        terceraActivity.putExtra("posicionInterruptor", interruptorBoolean.isChecked());
+        startActivity(terceraActivity);
     }
 }

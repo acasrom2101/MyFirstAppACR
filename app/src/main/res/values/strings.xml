@@ -9,5 +9,9 @@
     <string name="second_activity_float_message">Número decimal</string>
     <string name="second_activity_float_hint">0.0</string>
     <string name="second_activity_boolean_message">Interruptor booleano</string>
-
+    <string name="third_activity_button_text">Volver al inicio</string>
+    <string name="third_activity_string_text">Campo de texto: </string>
+    <string name="third_activity_entero_text">Campo de número entero: </string>
+    <string name="third_activity_decimal_text">Campo de número decimal: </string>
+    <string name="third_activity_boolean_state">Estado del interruptor: </string>
 </resources>
