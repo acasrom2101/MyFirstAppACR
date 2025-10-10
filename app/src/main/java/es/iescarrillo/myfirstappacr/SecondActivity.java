@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Switch;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,6 +21,9 @@ public class SecondActivity extends AppCompatActivity implements View.OnClickLis
     EditText campoEntero;
     EditText campoDecimal;
     Switch interruptorBoolean;
+    boolean campoTextoEscrito;
+    boolean campoEnteroEscrito;
+    boolean campoDecimalEscrito;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,11 +47,25 @@ public class SecondActivity extends AppCompatActivity implements View.OnClickLis
 
     @Override
     public void onClick(View v) {
-        Intent terceraActivity = new Intent(v.getContext(), ThirdActivity.class);
-        terceraActivity.putExtra("datosCampoTexto", campoTexto.getText().toString());
-        terceraActivity.putExtra("datosCampoEntero", campoEntero.getText().toString());
-        terceraActivity.putExtra("datosCampoDecimal", campoDecimal.getText().toString());
-        terceraActivity.putExtra("posicionInterruptor", interruptorBoolean.isChecked());
-        startActivity(terceraActivity);
+        campoTextoEscrito = campoTexto.getText().toString().isEmpty();
+        campoEnteroEscrito = campoEntero.getText().toString().isEmpty();
+        campoDecimalEscrito = campoDecimal.getText().toString().isEmpty();
+        if(campoTextoEscrito){
+            Toast.makeText(this, "Debe escribir algo en el campo de texto", Toast.LENGTH_LONG).show();
+        }
+        if(campoEnteroEscrito){
+            Toast.makeText(this, "Debe escribir un número en el campo de enteros", Toast.LENGTH_LONG).show();
+        }
+        if(campoDecimalEscrito){
+            Toast.makeText(this, "Debe escribir un número en el campo de decimales", Toast.LENGTH_LONG).show();
+        }
+        if(!campoTextoEscrito && !campoEnteroEscrito && !campoDecimalEscrito){
+            Intent terceraActivity = new Intent(v.getContext(), ThirdActivity.class);
+            terceraActivity.putExtra("datosCampoTexto", campoTexto.getText().toString());
+            terceraActivity.putExtra("datosCampoEntero", campoEntero.getText().toString());
+            terceraActivity.putExtra("datosCampoDecimal", campoDecimal.getText().toString());
+            terceraActivity.putExtra("posicionInterruptor", interruptorBoolean.isChecked());
+            startActivity(terceraActivity);
+        }
     }
 }

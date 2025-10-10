@@ -62,7 +62,7 @@ public class ThirdActivity extends AppCompatActivity implements View.OnClickList
 
     @Override
     public void onClick(View v) {
-        Intent primeraActivity = new Intent(v.getContext(), SecondActivity.class);
+        Intent primeraActivity = new Intent(v.getContext(), MainActivity.class);
         startActivity(primeraActivity);
     }
 }
