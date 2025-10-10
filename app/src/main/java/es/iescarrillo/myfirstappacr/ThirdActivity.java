@@ -12,6 +12,9 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+/**
+ * Clase para la second activity, extendiendo de AppCompatActivity e implementando OnClickListener
+ */
 public class ThirdActivity extends AppCompatActivity implements View.OnClickListener {
 
     Button btnTerceroVolverAPrimero;
@@ -20,6 +23,12 @@ public class ThirdActivity extends AppCompatActivity implements View.OnClickList
     TextView campoResultadoDecimal;
     TextView campoEstadoInterruptor;
 
+    /**
+     * Cuando se crea la activity, se activa egde to edge (para que se adapte a los bordes del dispositivo y pone el contenido del main en pantalla. Ahora
+     * carga las vistas de los textView y el botón de volver al main. Para terminar, añade OnClickListener al botón de volver y llama al metodo mostrar resultados.
+     * @param savedInstanceState Guarda los datos mas recientes en caso de cerrar la aplicación.
+     *
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,6 +51,9 @@ public class ThirdActivity extends AppCompatActivity implements View.OnClickList
         mostrarResultados();
     }
 
+    /**
+     * Carga el contenido del intent de SecondActivity en sus respectivas variables y cambia el texto de los textView para que incluyan los valores del usuario.
+     */
     public void mostrarResultados(){
         Intent intent = getIntent();
         String stringUsuario = intent.getStringExtra("datosCampoTexto");
@@ -60,6 +72,10 @@ public class ThirdActivity extends AppCompatActivity implements View.OnClickList
         }
     }
 
+    /**
+     * Al hacer click en el botón, manda al usuario de vuelta a MainActivity
+     * @param v La vista sobre la que se hizo click.
+     */
     @Override
     public void onClick(View v) {
         Intent primeraActivity = new Intent(v.getContext(), MainActivity.class);

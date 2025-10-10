@@ -14,6 +14,9 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+/**
+ * Clase para la second activity, extendiendo de AppCompatActivity e implementando OnClickListener
+ */
 public class SecondActivity extends AppCompatActivity implements View.OnClickListener {
 
     Button btnSegundoEnviarATercero;
@@ -25,6 +28,12 @@ public class SecondActivity extends AppCompatActivity implements View.OnClickLis
     boolean campoEnteroEscrito;
     boolean campoDecimalEscrito;
 
+    /**
+     * Cuando se crea la activity, se activa egde to edge (para que se adapte a los bordes del dispositivo y pone el contenido del main en pantalla. A continuación
+     * carga las vistas de los EditText, el botón de continuar y el switch. Finalmente, añade OnClickListener al botón que va a la tercera página.
+     * @param savedInstanceState Guarda los datos mas recientes en caso de cerrar la aplicación.
+     *
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,6 +54,11 @@ public class SecondActivity extends AppCompatActivity implements View.OnClickLis
         btnSegundoEnviarATercero.setOnClickListener(this);
     }
 
+    /**
+     * Al hacer click en el botón, analiza el contenido de los campos de texto. Si falta algo, avisa al usuario con un toast. Si no falta nada, lo carga en el
+     * intent y lo manda a ThidActivity.
+     * @param v La vista sobre la que se hizo click.
+     */
     @Override
     public void onClick(View v) {
         campoTextoEscrito = campoTexto.getText().toString().isEmpty();

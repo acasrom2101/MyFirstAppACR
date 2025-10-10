@@ -22,7 +22,7 @@
         app:layout_constraintVertical_bias="0.529" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/tvCadenaTexto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/second_activity_string_message"
@@ -48,7 +48,7 @@
         app:layout_constraintVertical_bias="0.153" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/tvNumeroEntero"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/second_activity_int_message"
@@ -89,7 +89,7 @@
         app:layout_constraintVertical_bias="0.702" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/tvNumeroDecimal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/second_activity_float_message"
@@ -113,7 +113,7 @@
         app:layout_constraintVertical_bias="0.879" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/tvInterruptorBooleano"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/second_activity_boolean_message"
